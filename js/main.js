@@ -54,6 +54,7 @@ $(function(){
   });
 });
 
-function sendMail(a) {
-  console.log(a);
+function sendMail(e) {
+  const body = `Nom: ${e.name.value}\nEmail: ${e.email.value}\n\n${e.message.value}`;
+  window.open(`mailto:letournemain@gmail.com?subject=Contact&body=${body}`);
 }
