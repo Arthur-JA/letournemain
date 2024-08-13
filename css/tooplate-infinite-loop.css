@@ -18,10 +18,10 @@
   initial-value: #c09847;
 }
 
-@property --text-dark-color {
+@property --text-forth-color {
   syntax: "<color>";
   inherits: true;
-  initial-value: #1d351b;
+  initial-value: #a2af9f;
 }
 
 
@@ -277,11 +277,24 @@ blockquote {
 /* Testimonials */
 #mywork {
   color: white;
-  background-image: url(../img/me2.jpg);
+  background-image: url(../img/me3.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: -170px;
   position: relative;
   filter: blur(50%);
+}
+
+@media (max-width: 1460px) {
+  #mywork {
+    background-position-y: center;
+  }
+}
+
+@media (max-width: 766px) {
+  #mywork {
+    background-position-x: center;
+  }
 }
 
 
@@ -535,7 +548,7 @@ figure.effect-honey:hover h2 i {
 
 #contact {
   color: white;
-  background-color: #1d351b;
+  background-color: var(--text-forth-color);
   position: relative;
   padding-bottom: 50px;
   padding-top: 100px;
@@ -559,7 +572,7 @@ figure.effect-honey:hover h2 i {
 
 .item-link:hover i,
 .item-link:hover span {
-  color: var(--text-tertiary-color);
+  color: color-mix(in srgb, var(--text-secondary-color), black 40%);
 }
 
 .tm-input {

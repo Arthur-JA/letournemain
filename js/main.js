@@ -1,12 +1,15 @@
 $(function(){
   // Detect window scroll and update navbar
-  $(window).scroll(function(e){
+  const checkScroll = (e) => {
     if($(document).scrollTop() > 120) {
       $('.tm-navbar').addClass("scroll");
     } else {
       $('.tm-navbar').removeClass("scroll");
     }
-  });
+  }
+
+  $(window).scroll(checkScroll);
+  checkScroll();
 
   // Close mobile menu after click
   $('#tmNav a').on('click', function(){
@@ -41,35 +44,6 @@ $(function(){
     gallery: { enabled: true }
   });
 
-  // $('.tm-mywork-carousel').slick({
-  //   dots: true,
-  //   prevArrow: false,
-  //   nextArrow: false,
-  //   infinite: false,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   responsive: [
-  //     {
-  //       breakpoint: 992,
-  //       settings: {
-  //         slidesToShow: 2
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         slidesToShow: 2
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //           slidesToShow: 1
-  //       }
-  //     }
-  //   ]
-  // });
-
   $('#novelty-grid, #essentials-grid').slick({
     dots: true,
     infinite: true,
@@ -78,42 +52,8 @@ $(function(){
     centerMode: true,
     variableWidth: true
   });
-
-  // Gallery
-  // $('.tm-gallery').slick({
-  //   dots: true,
-  //   infinite: false,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 2,
-  //   responsive: [
-  //   {
-  //     breakpoint: 1199,
-  //     settings: {
-  //       slidesToShow: 4,
-  //       slidesToScroll: 2
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 991,
-  //     settings: {
-  //       slidesToShow: 3,
-  //       slidesToScroll: 2
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 767,
-  //     settings: {
-  //       slidesToShow: 2,
-  //       slidesToScroll: 1
-  //     }
-  //   },
-  //   {
-  //     breakpoint: 480,
-  //     settings: {
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1
-  //     }
-  //   }
-  // ]
-  // });
 });
+
+function sendMail(a) {
+  console.log(a);
+}
