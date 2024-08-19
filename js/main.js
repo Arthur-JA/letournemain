@@ -14,18 +14,11 @@ $(function(){
   // Close mobile menu after click
   $('#tmNav a').on('click', function(){
     $('.navbar-collapse').removeClass('show');
-  })
-
-  // Scroll to corresponding section with animation
-  $('#tmNav').singlePageNav({
-    'easing': 'easeInOutExpo',
-    'speed': 600
   });
 
   // Add smooth scrolling to all links
-  // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
-  $("a").on('click', function(event) {
-    if (this.hash !== "") {
+  $('a').on('click', function(event) {
+    if (this.hash !== '') {
       event.preventDefault();
       let hash = this.hash;
 
@@ -34,10 +27,9 @@ $(function(){
       }, 600, 'easeInOutExpo', function(){
         window.location.hash = hash;
       });
-    } // End if
+    }
   });
 
-  // Pop up
   $('.tm-gallery').magnificPopup({
     delegate: 'a',
     type: 'image',
