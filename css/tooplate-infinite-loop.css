@@ -274,8 +274,7 @@ blockquote {
 	padding: 20px 0 30px 0;
 }
 
-/* Testimonials */
-#mywork {
+#montravail {
   color: white;
   background-image: url(../img/me3.jpg);
   background-size: cover;
@@ -286,13 +285,13 @@ blockquote {
 }
 
 @media (max-width: 1460px) {
-  #mywork {
+  #montravail {
     background-position-y: center;
   }
 }
 
 @media (max-width: 766px) {
-  #mywork {
+  #montravail {
     background-position-x: center;
   }
 }
